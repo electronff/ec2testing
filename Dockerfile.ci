@@ -10,5 +10,5 @@ RUN PYTHONPATH=/usr/bin/python pip3 install -r requirements.txt
 #Expose Nginx Port
 EXPOSE 5000
 #Start NginxService 
-ENTRYPOINT ["python"]
+ENTRYPOINT ["main.py"]
 CMD ["main.py"]
