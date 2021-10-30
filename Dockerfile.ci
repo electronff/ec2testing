@@ -2,8 +2,8 @@
 FROM ubuntu:20.04
 RUN apt-get update && apt-get install -y python3.9
 # Working directory inside app
-WORKDIR /app
-COPY . /app
+WORKDIR /main
+COPY . /main
 # Install app dependecy 
 RUN apt-get install -y python3-pip && pip3 install --upgrade pip
 RUN PYTHONPATH=/usr/bin/python pip3 install -r requirements.txt
@@ -11,4 +11,4 @@ RUN PYTHONPATH=/usr/bin/python pip3 install -r requirements.txt
 EXPOSE 5000
 #Start NginxService 
 ENTRYPOINT ["python"]
-CMD ["app.py"]
+CMD ["main.py"]
