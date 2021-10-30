@@ -75,7 +75,7 @@ jobs:
       name: Build & push Docker image
       with:
         image: muritala/flask
-        tags: latest
+        tags: v2
         registry: docker.io
         dockerfile: Dockerfile.ci
         username: ${{ secrets.DOCKER_USERNAME }}
