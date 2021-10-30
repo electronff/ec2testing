@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y python3.9
 WORKDIR /app
 COPY . /app
 # Install app dependecy 
-RUN apt-get install python3-pip && pip3 install --upgrade pip
+RUN apt-get install python3-pip && pip3 install --upgrade pip -y
 RUN PYTHONPATH=/usr/bin/python pip3 install -r requirements.txt
 #Expose Nginx Port
 EXPOSE 5000
