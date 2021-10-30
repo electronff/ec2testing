@@ -10,5 +10,5 @@ RUN pip3 install -r requirements.txt
 #Expose Nginx Port
 EXPOSE 5000
 #Start NginxService 
-ENTRYPOINT ["python3"]
-CMD ["main.py"]
+ENTRYPOINT ["bash","entrypoint.prod.sh"]
+CMD ["python3", "app.py"]
